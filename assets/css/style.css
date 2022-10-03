@@ -1,0 +1,460 @@
+:root {
+  --ascent-color: #96B92D;
+  --text-color: #212121;
+  --shadow-color: #00000020;
+  --body-bg: #ffffff;
+  --navbar-bg: #ffffff;
+  --logo-bg: #f3f3f3;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+h1 {
+  font-family: 'Libre Baskerville', serif;
+}
+h2, p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0 !important;
+  z-index: 99;
+  width: 100%;
+  box-shadow: 0 0 10px var(--shadow-color);
+  background-color: var(--navbar-bg) !important;
+}
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+.website-logo {
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--logo-bg);
+}
+.website-title {
+  font-family: 'Libre Baskerville', serif;
+  margin-left: 10px;
+  border-right: 1px solid var(--ascent-color);
+  padding-right: 35px;
+  margin-right: 0;
+  color: var(--text-color);
+}
+.nav-link {
+  position: relative;
+}
+.nav-link:hover span {
+  opacity: 1;
+}
+.nav-link span {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--text-color);
+  font-family: 'Libre Baskerville', serif;
+  position: absolute;
+  background-color: var(--navbar-bg);
+  width: max-content;
+  padding: 10px 20px;
+  top: 80px;
+  opacity: 0;
+  pointer-events: none;
+  left: 0;
+  border-top: 3px solid var(--ascent-color);
+  transition: .2s;
+}
+.nav-link span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid var(--ascent-color);
+  top: -7px;
+  left: 33px;
+  transform: translate(-50%, -50%);
+}
+#instagram-container {
+  width: 66px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+}
+#instagram-container i {
+  font-size: 22px;
+  background-color: var(--ascent-color);
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  
+  outline: 3px solid white;
+  color: white;
+  transition: .2s;
+}
+#instagram-container i:hover {
+  color: var(--ascent-color);
+  background-color: transparent;
+  outline-color: var(--ascent-color);
+}
+
+main {
+  padding-top: 76px;
+}
+.introduction {
+  background-image: url(../img/introduction-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+.introduction h1 {
+  color: #ffffff;
+}
+.introduction h1 b {
+  color: var(--ascent-color);
+}
+.introduction h2 {
+  color: #ffffff;
+  font-size: 25px;
+}
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: linear-gradient(to right, #00000075 80%, transparent);
+  width: 768px;
+}
+
+.statistic {
+  text-align: center;
+  padding: 0 50px;
+}
+.statistic i {
+  font-size: 50px;
+  color: var(--ascent-color);
+}
+.statistic p {
+  margin: 0;
+  font-size: 30px;
+  color: var(--text-color);
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+.benefits h1 {
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-top: 20px;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  place-items: center;
+  margin-top: 20px;
+}
+.benefits .card-title {
+  color: var(--ascent-color);
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 10px;
+  font-family: 'Libre Baskerville', serif;
+}
+.benefits .card {
+  text-align: center;
+  height: 250px;
+  border: none;
+  box-shadow: 0 0 10px var(--shadow-color);
+  border-radius: 20px;
+  background-color: var(--navbar-bg);
+}
+.benefits .card-text {
+  color: var(--text-color);
+}
+.benefits .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#tutorial-title {
+  padding: 20px 0;
+  background-color: var(--ascent-color);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+  margin: 0;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.tutorial-step h1 {
+  text-align: left;
+  background-color: transparent;
+  font-size: 30px;
+  color: var(--ascent-color);
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.tutorial-step p {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.text-side, .image-side {
+  width: 50%;
+  height: 400px;
+}
+.text-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+}
+.tutorial-step {
+  display: flex;
+}
+#sort-step {
+  background-image: url(../img/sort-step.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#find-step {
+  background-image: url(../img/find-step.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#enjoy-step {
+  background-image: url(../img/enjoy-step.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  padding-bottom: 20px;
+  background-color: var(--ascent-color);
+}
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer h1 {
+  font-size: 18px;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+.footer-copy {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: var(--navbar-bg);
+  padding: 10px 0;
+  margin-top: 20px;
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+.footer-copy span {
+  border: none;
+}
+.footer-container {
+  height: fit-content;
+}
+.footer-container h1 {
+  color: #ffffff;
+}
+footer ul li {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+#change-theme-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--ascent-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  outline: 2px solid white;
+  font-size: 20px;
+}
+.instagram-btn {
+  display: none !important;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  display: block;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--ascent-color);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  outline: 2px solid white;
+  color: white;
+  
+}
+.instagram-btn:hover {
+  color: white;
+}
+
+@media (max-width: 1350px) {
+  .benefits-grid {
+    grid-template-columns: auto auto;
+  }
+  .benefits .card {
+    width: 45vw !important;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1110px) {
+  .tutorial-step h1 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 992px) {
+  .instagram-btn {
+    display: unset !important;
+  }
+  #instagram-container {
+    display: none;
+  }
+  .website-title {
+    padding: 0;
+    border: none;
+  }
+  .nav-link span {
+    position: unset;
+    background-color: transparent;
+    pointer-events: unset;
+    border: none;
+    opacity: 1;
+  }
+  .nav-link span::after {
+    display: none;
+  }
+}
+@media (width: 992px) {
+  .instagram-btn {
+    display: none !important;
+  }
+  #instagram-container {
+    display: unset;
+  }
+  .website-title {
+    border-right: 1px solid var(--ascent-color);
+    padding-right: 35px;
+    margin-right: 0;
+  }
+  .nav-link {
+    position: relative;
+  }
+  .nav-link:hover span {
+    opacity: 1;
+  }
+  .nav-link span {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    background-color: #ffffff;
+    width: max-content;
+    padding: 10px 20px;
+    top: 80px;
+    opacity: 0;
+    pointer-events: none;
+    left: 0;
+    border-top: 3px solid var(--ascent-color);
+    transition: .2s;
+  }
+  .nav-link span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom: 5px solid var(--ascent-color);
+    top: -7px;
+    left: 33px;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 900px) {
+  .tutorial h1 {
+    font-size: 20px;
+  }
+  .tutorial-step h1 {
+    font-size: 25px;
+  }
+  .tutorial-step p {
+    font-size: 2vw;
+  }
+  .statistic p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .intro-container {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 700px) {
+  .benefits h1 {
+    padding: 0 30px;
+  }
+  .benefits-grid {
+    grid-template-columns: auto;
+  }
+  .benefits .card {
+    width: 80vw !important;
+    margin-bottom: 20px;
+  }
+  .text-side, .image-side {
+    width: 100%;
+  }
+  .text-side {
+    height: 300px;
+    align-items: center;
+    text-align: center;
+  }
+  .tutorial-step {
+    flex-direction: column;
+  }
+  .tutorial-step p {
+    font-size: 3vw;
+  }
+  .tutorial-step--invert {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  #tutorial-title {
+    font-size: 18px;
+  }
+  .text-side {
+    height: 375px;
+  }
+  .tutorial-step h1 {
+    font-size: 23px;
+  }
+  .tutorial-step p {
+    font-size: 16px;
+  }
+  .introduction h2 {
+    font-size: 20px;
+  }
+}
